@@ -15,5 +15,8 @@
     "@types/node": "^17.0.23"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  }
 }
