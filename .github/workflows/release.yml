@@ -9,14 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: go-semantic-release/action@v1
         with:
-          node-version: "16.17.0"
-          registry-url: https://npm.pkg.github.com/
-          scope: '@[tatsuya-ogawa]'
-          always-auth: true
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm install -g semantic-release-cli && semantic-release-cli
-        shell: bash
+          github-token: ${{ secrets.GITHUB_TOKEN }}
