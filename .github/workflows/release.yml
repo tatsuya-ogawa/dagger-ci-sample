@@ -18,4 +18,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash -c "npm install -g semantic-release-cli && semantic-release"
+        run: npm install -g semantic-release-cli && semantic-release
+        shell: bash
