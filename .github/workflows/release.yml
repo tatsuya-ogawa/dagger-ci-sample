@@ -8,7 +8,7 @@ on:
       - "next-major"
       - "beta"
       - "alpha"
-      - "releases/**"
+      - "**"
 jobs:
   release:
     runs-on: ubuntu-latest
