@@ -15,7 +15,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@[tatsuya-ogawa]'
           always-auth: true
-      
       - name: Install dependencies
         run: npm install -g semantic-release-cli
       
