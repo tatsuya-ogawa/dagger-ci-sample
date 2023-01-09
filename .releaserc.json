@@ -13,6 +13,7 @@
       "prerelease": true
     }
   ],
+  "tagFormat": "release${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
