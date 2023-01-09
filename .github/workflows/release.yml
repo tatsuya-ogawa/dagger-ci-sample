@@ -1,0 +1,25 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.17.0"
+          registry-url: https://npm.pkg.github.com/
+          scope: '@[tatsuya-ogawa]'
+          always-auth: true
+      
+      - name: Install dependencies
+        run: npm install -g semantic-release-cli
+      
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: semantic-release
