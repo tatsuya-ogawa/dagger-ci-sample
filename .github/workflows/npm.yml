@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 'node/lib'
     permissions:
       packages: write
       contents: read
@@ -22,18 +25,14 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@[tatsuya-ogawa]'
           always-auth: true
-        working-directory: node/lib
 
       - name: yarn install
         run: yarn install
-        working-directory: node/lib
 
       - name: build
         run: yarn build
-        working-directory: node/lib
 
       - name: publish
         run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        working-directory: node/lib
