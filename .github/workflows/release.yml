@@ -4,6 +4,10 @@ on:
     workflow_dispatch:
     branches:
       - "main"
+      - "next",
+      - "next-major"
+      - "beta"
+      - "alpha"
       - "releases/**"
 jobs:
   release:
