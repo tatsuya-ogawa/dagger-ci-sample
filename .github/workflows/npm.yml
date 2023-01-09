@@ -1,4 +1,4 @@
-name: ci
+name: Npm Release
 
 on:
   release:
