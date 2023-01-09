@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
       - "next",
-      - "next-major",
+      - "next-major"
       - "beta"
       - "alpha"
       - "releases/**"
