@@ -15,11 +15,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@[tatsuya-ogawa]'
           always-auth: true
-      
-      - name: Install dependencies
-        run: yarn add -g semantic-release-cli
-      
+            
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: yarn semantic-release
+        run: npx semantic-release
