@@ -22,6 +22,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@[tatsuya-ogawa]'
           always-auth: true
+        working-directory: node/lib
 
       - name: yarn install
         run: yarn install
